@@ -1,7 +1,8 @@
-<h1>Welcome to my photo site of animals</h1>
+<h1 class="indexTitle">Welcome to my photo site of animals</h1>
 <% @photos.each do |photo| %> <!--looping through photos and each time inject some html -->
-  <div>
+  <div class="pics">
     <h3><a href="/photos/<%= photo[:id]%>"><%= photo[:title]%></a></h3>
     <img src="<%= photo[:img] %>" alt="">
   </div>
 <% end %>
+<br><br>

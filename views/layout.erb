@@ -6,7 +6,9 @@
   </head>
   <body>
     <%= erb(:'partials/navigation', :layout => false) %>
+    <link rel="stylesheet" href="/stylesheets/page.css">
     <%= yield %>
+    <%= erb(:'partials/footer', :layout => false) %>
 
   </body>
 </html>
