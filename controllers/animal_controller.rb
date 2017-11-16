@@ -22,7 +22,6 @@ class AnimalController < Sinatra::Base
     {
         id: 2,
         title: "Bears",
-        body: "Bears",
         img: "http://www.fun-facts.org.uk/images/bear.gif"
     }];
 
@@ -46,10 +45,22 @@ class AnimalController < Sinatra::Base
   end
 
   #Show photos page
-  get "/photos/:id" do
-    id = params[:id].to_i
-    @photo = $photos[id]
-    erb :'photos/show'
+  get "/photos/0" do
+    id = params[0].to_i
+    @photo1 = $photos[0]
+    erb :'photos/lion'
+  end
+
+  get "/photos/1" do
+    id = params[1].to_i
+    @photo2 = $photos[1]
+    erb :'photos/tigers'
+  end
+
+  get "/photos/2" do
+    id = params[2].to_i
+    @photo3 = $photos[2]
+    erb :'photos/bears'
   end
 
   #Edit page
