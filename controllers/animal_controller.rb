@@ -11,19 +11,17 @@ class AnimalController < Sinatra::Base
   #Image info
   $photos = [{
     	 id: 0,
-    	 title: "Photo 1",
-    	 body: "Lions",
+    	 title: "Lions",
        img: "https://data.whicdn.com/images/230929611/superthumb.jpg"
     },
     {
         id: 1,
-        title: "Photo 2",
-        body: "Tigers",
+        title: "Tigers",
         img: "http://makemypromotion.com/demos/courses/wp-content/uploads/2017/04/tiger1-300x250.jpg"
     },
     {
         id: 2,
-        title: "Photo 3",
+        title: "Bears",
         body: "Bears",
         img: "http://www.fun-facts.org.uk/images/bear.gif"
     }];
@@ -53,7 +51,7 @@ class AnimalController < Sinatra::Base
     @photo = $photos[id]
     erb :'photos/show'
   end
-  
+
   #Edit page
   get "/photos/:id/edit" do
     @photo = $photos
