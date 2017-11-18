@@ -45,22 +45,10 @@ class AnimalController < Sinatra::Base
   end
 
   #Show photos page
-  get "/photos/0" do
-    id = params[0].to_i
-    @photo1 = $photos[0]
-    erb :'photos/lion'
-  end
-
-  get "/photos/1" do
-    id = params[1].to_i
-    @photo2 = $photos[1]
-    erb :'photos/tigers'
-  end
-
-  get "/photos/2" do
-    id = params[2].to_i
-    @photo3 = $photos[2]
-    erb :'photos/bears'
+  get "/photos/:id" do
+    id = params[:id].to_i
+    @photo = $photos[id]
+    erb :'photos/show'
   end
 
   #Edit page
