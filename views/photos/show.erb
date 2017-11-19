@@ -1,7 +1,12 @@
 <div class="soloPics">
-  <h1><%= @photo[:title] %></h1>
-  <img src="<%= @photo[:img] %>" alt=""/>
+  <h1><%= @photo.title %></h1>
+  <p><%= @photo.body %></p>
+  <img src="<%= @photo.image %>" alt=""/>
   <br>
-  <a href="/photos/<%= @photo[:id] %>/edit">Edit</a>
+  <a href="/photos/<%= @photo.id %>/edit">Edit</a>
+  <form action="<%= @photo.id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" name="name" value="Delete">
+  </form>
   <br><br><br><br>
 </div>

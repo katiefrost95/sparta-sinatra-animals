@@ -12,17 +12,20 @@ class AnimalController < Sinatra::Base
   $photos = [{
     	 id: 0,
     	 title: "Lions",
-       img: "https://data.whicdn.com/images/230929611/superthumb.jpg"
+       body: "This is a Lion",
+       image: "https://data.whicdn.com/images/230929611/superthumb.jpg"
     },
     {
         id: 1,
         title: "Tigers",
-        img: "http://makemypromotion.com/demos/courses/wp-content/uploads/2017/04/tiger1-300x250.jpg"
+        body: "This is a Tiger",
+        image: "http://makemypromotion.com/demos/courses/wp-content/uploads/2017/04/tiger1-300x250.jpg"
     },
     {
         id: 2,
         title: "Bears",
-        img: "http://www.fun-facts.org.uk/images/bear.gif"
+        body: "This is a Bear",
+        image: "http://www.fun-facts.org.uk/images/bear.gif"
     }];
 
   #Homepage
@@ -34,26 +37,56 @@ class AnimalController < Sinatra::Base
   # #Index Page
   get "/photos" do
     @title = "Photos"
-    @photos =$photos
+    @photos = Photo.all
     erb :'photos/index'
   end
 
   #New photo page
   get "/photos/new" do
-    @photo = $photos
+    @photo = Photo.new
     erb :'photos/new'
   end
 
   #Show photos page
   get "/photos/:id" do
     id = params[:id].to_i
-    @photo = $photos[id]
+    @photo = Photo.find(id)
     erb :'photos/show'
+  end
+
+  #Post new
+  post '/photos' do
+    photo = Photo.new
+    photo.title = params[:title]
+    photo.body = params[:body]
+    photo.image = params[:image]
+    photo.save
+    redirect "/photos"
+  end
+
+  #Edit
+  put '/photos/:id' do
+    id = params[:id].to_i
+    photo = Photo.find(id)
+    photo.id = params[:id]
+    photo.title = params[:title]
+    photo.body = params[:body]
+    photo.image = params[:image]
+    photo.save
+    redirect '/photos'
+  end
+
+  #Delete
+  delete "/photos/:id" do
+    id = params[:id]
+    Photo.destroy(id)
+    redirect "/photos"
   end
 
   #Edit page
   get "/photos/:id/edit" do
-    @photo = $photos
+    id = params[:id].to_i
+    @photo = Photo.find(id)
     erb :'photos/edit'
   end
 
