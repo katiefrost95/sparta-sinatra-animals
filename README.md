@@ -10,15 +10,17 @@ Your site will need to have the following:-
 * It should include all the relevant ERB templates for the routes that render HTML
 * At least two partials
 * A layout template
-* A new set of data in a static Model
+* A new database using Postgres
+* Forms to manage creation and update of resource (Must reuse the forms)
+* You data should be persist even when you restart your server
 * Links to navigate around the CRUD actions on your site so you dont need to navigate via the url
-* Styling to make the site look good **(This will need some research on how to include your CSS)**
+* Styling to make the site look really really really good
 
 ### What I delivered
 Everything except for a working edit button.
 
 ### What went well
-I managed to fix most of the problems I was encountering. 
+I managed to fix most of the problems I was encountering.
 
 ### What didn't go so well
 I kept missing tiny details which would hold me up for ages when the webpages would break. Could have added a bit more styling.
