@@ -15,10 +15,10 @@ Your site will need to have the following:-
 * Styling to make the site look good **(This will need some research on how to include your CSS)**
 
 ### What I delivered
-Everything.
+Everything except for a working edit button.
 
 ### What went well
-I really understood the concept of the framework and how to use it. I think the website looks fine and I delivered on everything.
+I managed to fix most of the problems I was encountering. 
 
 ### What didn't go so well
 I kept missing tiny details which would hold me up for ages when the webpages would break. Could have added a bit more styling.
