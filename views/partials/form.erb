@@ -3,14 +3,17 @@
     <label>Title</label>
     <input type="text" name="title" placeholder="Enter a title" value="<%= @photo.title %>">
   </div>
+  <br>
   <div>
     <label>Body</label>
     <textarea name="body" rows="8" cols="40" placeholder="The body of the post"><%= @photo.body %></textarea>
   </div>
+  <br>
   <div>
     <label>Image</label>
     <textarea name="image" rows="8" cols="60" placeholder="Enter the image URL"><%= @photo.image %></textarea>
   </div>
+  <br>
   <div>
     <input type="submit" value="Save Photo">
   </div>

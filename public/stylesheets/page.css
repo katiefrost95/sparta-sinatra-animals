@@ -1,6 +1,12 @@
 body {
   background-color: red;
 }
+.formPage {
+  text-align: center;
+}
+label {
+  font-size: 20px;
+}
 nav {
   background-color: grey;
   margin: -10px -8px 0 -8px;
