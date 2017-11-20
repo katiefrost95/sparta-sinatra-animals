@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= @title %></title>
+  </head>
+  <body>
+    <%= erb(:'partials/navigation', :layout => false) %>
+    <link rel="stylesheet" href="/stylesheets/page.css">
+    <%= yield %>
+    <%= erb(:'partials/footer', :layout => false) %>
+  </body>
+</html>
