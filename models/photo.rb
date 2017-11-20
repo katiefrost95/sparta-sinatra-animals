@@ -18,7 +18,7 @@ class Photo
 
   def self.all
     conn = self.open_connection
-    sql = "SELECT id,title,body,image FROM animals ORDER BY id DESC"
+    sql = "SELECT id,title,body,image FROM animals ORDER BY id"
     results = conn.exec(sql)
     photos = results.map do |photo|
       self.hydrate(photo)

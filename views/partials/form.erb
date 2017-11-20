@@ -1,4 +1,4 @@
-<form action="/photos<%= @photo.id %>" method="POST">
+<form action="/photos/<%= @photo.id %>" method="POST">
   <div>
     <label>Title</label>
     <input type="text" name="title" placeholder="Enter a title" value="<%= @photo.title %>">

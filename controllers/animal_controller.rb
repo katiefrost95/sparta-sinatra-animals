@@ -8,26 +8,6 @@ class AnimalController < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  #Image info
-  $photos = [{
-    	 id: 0,
-    	 title: "Lions",
-       body: "This is a Lion",
-       image: "https://data.whicdn.com/images/230929611/superthumb.jpg"
-    },
-    {
-        id: 1,
-        title: "Tigers",
-        body: "This is a Tiger",
-        image: "http://makemypromotion.com/demos/courses/wp-content/uploads/2017/04/tiger1-300x250.jpg"
-    },
-    {
-        id: 2,
-        title: "Bears",
-        body: "This is a Bear",
-        image: "http://www.fun-facts.org.uk/images/bear.gif"
-    }];
-
   #Homepage
   get "/" do
     @title = "Photo Homepage"
