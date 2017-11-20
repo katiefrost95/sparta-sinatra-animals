@@ -13,7 +13,7 @@ Your site will need to have the following:-
 * A new database using Postgres
 * Forms to manage creation and update of resource (Must reuse the forms)
 * You data should be persist even when you restart your server
-* Links to navigate around the CRUD actions on your site so you dont need to navigate via the url
+* Links to navigate around the CRUD actions on your site so you don't need to navigate via the url
 * Styling to make the site look really really really good
 
 ### What I delivered
