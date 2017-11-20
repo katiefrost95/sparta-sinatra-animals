@@ -17,10 +17,10 @@ Your site will need to have the following:-
 * Styling to make the site look really really really good
 
 ### What I delivered
-Everything except for a working edit button.
+Everything.
 
 ### What went well
 I managed to fix most of the problems I was encountering.
 
 ### What didn't go so well
-I kept missing tiny details which would hold me up for ages when the webpages would break. Would have liked to have added a bit more styling.
+I kept missing tiny details which would hold me up for ages when the webpages would break. Would have liked to have added a bit more styling but it refused to work.
